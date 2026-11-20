@@ -8,4 +8,5 @@
     <color name="accent">#2F6FEB</color>
     <color name="accentLight">#7FB0FF</color>
     <color name="iconBg">#2F6FEB</color>
+    <color name="textBody">#D5DDE4</color>
 </resources>

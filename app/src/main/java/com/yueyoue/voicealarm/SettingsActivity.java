@@ -77,6 +77,13 @@ public class SettingsActivity extends Activity {
             }
         });
 
+        findViewById(R.id.rowGuide).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SettingsActivity.this, GuideActivity.class));
+            }
+        });
+
         tvExactStatus = findViewById(R.id.tvExactStatus);
         tvFullScreenStatus = findViewById(R.id.tvFullScreenStatus);
         tvNotifStatus = findViewById(R.id.tvNotifStatus);

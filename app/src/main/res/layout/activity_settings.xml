@@ -23,6 +23,53 @@
             android:textSize="26sp"
             android:textStyle="bold" />
 
+        <!-- 使用教程入口 -->
+        <LinearLayout
+            android:id="@+id/rowGuide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="14dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用教程"
+                    android:textColor="@color/text"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="后台不被杀、闹钟准时响的设置步骤"
+                    android:textColor="@color/textDim"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看 ›"
+                android:textColor="@color/accentLight"
+                android:textSize="16sp" />
+        </LinearLayout>
+
         <!-- 语音提醒 -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -280,7 +327,7 @@
             android:background="@drawable/bg_card"
             android:lineSpacingExtra="5dp"
             android:padding="16dp"
-            android:text="使用提示\n1. 请在系统设置中允许本应用「闹钟和提醒」「通知」「自启动」「后台运行」，否则闹钟可能不响或延迟。\n2. 闹钟响起后必须向右滑动才能解除，避免误触关闭。\n3. 语音播报使用手机自带的中文语音引擎，若无声请在系统的「文字转语音」中安装中文语音包。\n4. 手机重启或修改时间后，闹钟会自动重新设定。\n\n版本 1.0"
+            android:text="使用提示\n1. 请在系统设置中允许本应用「闹钟和提醒」「通知」「自启动」「后台运行」，否则闹钟可能不响或延迟。\n2. 闹钟响起后必须向右滑动才能解除，避免误触关闭。\n3. 语音播报使用手机自带的中文语音引擎，若无声请在系统的「文字转语音」中安装中文语音包。\n4. 手机重启或修改时间后，闹钟会自动重新设定。\n\n版本 1.1"
             android:textColor="@color/textDim"
             android:textSize="14sp" />
     </LinearLayout>

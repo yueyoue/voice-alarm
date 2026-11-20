@@ -41,6 +41,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".GuideActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".RingActivity"
             android:excludeFromRecents="true"
             android:exported="false"

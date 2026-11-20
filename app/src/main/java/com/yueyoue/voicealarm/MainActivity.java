@@ -47,6 +47,13 @@ public class MainActivity extends Activity {
         tvNext = findViewById(R.id.tvNext);
         tvPermission = findViewById(R.id.tvPermission);
 
+        findViewById(R.id.btnGuide).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, GuideActivity.class));
+            }
+        });
+
         findViewById(R.id.btnSettings).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

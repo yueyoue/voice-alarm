@@ -41,6 +41,19 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/btnGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingStart="14dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="14dp"
+            android:text="教程"
+            android:textColor="@color/accentLight"
+            android:textSize="18sp" />
+
+        <TextView
             android:id="@+id/btnSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
