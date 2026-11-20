@@ -22,12 +22,25 @@ jobs:
           java-version: '17'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install SDK platform and build tools
         run: |
-          sdkmanager "platforms;android-34" "build-tools;34.0.0" || true
-          yes | sdkmanager --licenses > /dev/null || true
+          set +e
+          SDK="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
+          echo "sdk.dir=$SDK" > local.properties
+          echo "SDK dir: $SDK"
+          ls "$SDK/platforms" || true
+          ls "$SDK/build-tools" || true
+          SM=$(find "$SDK/cmdline-tools" -maxdepth 3 -name sdkmanager -type f 2>/dev/null | head -1)
+          echo "sdkmanager: $SM"
+          if [ -n "$SM" ]; then
+            yes | "$SM" --licenses > /dev/null 2>&1
+            if [ ! -d "$SDK/platforms/android-34" ]; then "$SM" "platforms;android-34"; fi
+            if [ ! -d "$SDK/build-tools/34.0.0" ]; then "$SM" "build-tools;34.0.0"; fi
+          fi
+          echo "--- after ensure ---"
+          ls "$SDK/platforms" || true
+          ls "$SDK/build-tools" || true
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
